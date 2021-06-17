@@ -1,4 +1,4 @@
 CREATE TABLE publisher(id INTEGER PRIMARY KEY, name TEXT, country TEXT);
-CREATE TABLE books(id INTEGER PRIMARY KEY, title text, publisher  FOREIGN KEY (id) REFERENCES publisher(id));
+CREATE TABLE books(id INTEGER PRIMARY KEY, title text, publisher INTEGER, FOREIGN KEY (publisher) REFERENCES publisher(id));
 CREATE TABLE subjects(id INTEGER PRIMARY KEY, name text);
-CREATE TABLE books_subjects(book FOREIGN KEY (id) REFERENCES books(id), subject FOREIGN KEY (id) REFERENCES subjects(id));
+CREATE TABLE books_subjects(book INTEGER, subject INTEGER, FOREIGN KEY (book) REFERENCES books(id), FOREIGN KEY (subject) REFERENCES subjects(id));
