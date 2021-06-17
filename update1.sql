@@ -1,1 +1,1 @@
-UPDATE publisher SET name = 'Prentice Hall' where name = 'PHI';
+UPDATE publisher SET name = 'Prentice Hall' where id = 1;
