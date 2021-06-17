@@ -1,4 +1,3 @@
-PRAGMA foreign_keys = ON;
 CREATE TABLE publisher(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, country TEXT);
 CREATE TABLE books(id INTEGER PRIMARY KEY AUTOINCREMENT, title text, publisher  FOREIGN KEY (id) REFERENCES publisher(id));
 CREATE TABLE subjects(id INTEGER PRIMARY KEY AUTOINCREMENT, name text);
